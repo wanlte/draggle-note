@@ -141,9 +141,13 @@ section[class^= "section"] {
     cursor: pointer;
     /* 圆角 4px */
     border-radius: 4px;
-    /* display: flex; */
+    /* 使用弹性布局快速 */
+    display: flex;
+    /* 垂直居中 */
     align-items: center;
+    /* 水平居中 */
     justify-content: center;
+    /* 过渡效果 */
     transition: all 0.2s;
 }
 
@@ -152,9 +156,13 @@ section[class^= "section"] {
     color: #ef4444;
 }
 
+/* 同时拥有删除动画 */
 .note.deleting {
+    /* 透明度0.5 */
     opacity: 0.5;
+    /* 缩放0.9 */
     transform: scale(0.9);
+    /* 过渡效果 */
     transition: all 0.3s;
     pointer-events: none; /* 防止动画期间被再次点击 */
 }
@@ -186,22 +194,10 @@ section[class^= "section"] {
 }
 
 #trash-bin:hover {
+    /* 缩放1.1 */
     transform: scale(1.1);
 }
 
-.note-close {
-    background: none;
-    border: none;
-    /* 这个是关闭按钮的字体大小 */
-    font-size: 18px;
-    /* 这个指的是当鼠标悬停在关闭按钮上时会变成手型 */
-    cursor: pointer;
-    color: #666;
-}
-
-.note-close:hover {
-    color: #333;
-}
 
 /* 便签内容样式 */
 .note-content {
